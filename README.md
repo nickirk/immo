@@ -58,19 +58,19 @@ and create the new project called immo:
 
 then you will have the following structure of directories and files:
 
-    `immo/`
+     immo/
 
-        `scrapy.cfg            # deploy configuration file`
+         scrapy.cfg            # deploy configuration file
 
-        `immo/             # project's Python module, you'll import your code from here`
+         immo/             # project's Python module, you'll import your code from here
 
-            `__init__.py`
-            `items.py          # project items definition file`
-            `pipelines.py      # project pipelines file`
-            `settings.py       # project settings file`
+             __init__.py
+             items.py          # project items definition file
+             pipelines.py      # project pipelines file
+             settings.py       # project settings file
 
-            `spiders/          # a directory where you'll later put your spiders`
-            `__init__.py`
+             spiders/          # a directory where you'll later put your spiders
+             __init__.py
 
 Now let's go to the directory called `immo` and contains the file `scrapy.cfg` and another direcory which is also called `immo`:
 
