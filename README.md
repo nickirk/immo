@@ -110,6 +110,7 @@ Now copy the 3 files into the following directories:
 `cp ../immo_spider.py ./immobot/spiders/`
 
 after this you will have the following structure of directories and files 
+
      immobot/                  #Working directory
          immo.py
          submit.py
