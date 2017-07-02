@@ -58,7 +58,7 @@ and create the new project called immo:
 
 then you will have the following structure of directories and files:
 
-`immo/`
+    `immo/`
 
     `scrapy.cfg            # deploy configuration file`
 
