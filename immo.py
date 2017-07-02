@@ -15,7 +15,7 @@ while True:
         ini=input("Initialization for the first time. Sending messages to all offers found?(y/n)")
         if ini.lower() == "y":
             call(["rm", "href_old.json", ";", "touch", "href_old.json"])
-        else if ini.lower() == "n":
+        elif ini.lower() == "n":
             call(["cp", fname, "href_old.json"])
     with open('href.json') as data_file:    
             data = json.load(data_file)
@@ -30,7 +30,7 @@ while True:
     if os.path.isfile('blacklist.json'):
         with open('blacklist.json') as blacklist:
             blacklist = json.load(blacklist)
-        blacklist = list(set([i for i in blacklist]))
+        blacklist = list(set([i[u'href'] for i in blacklist]))
     else:
         blacklist = []
     print "Blacklist: ", blacklist
