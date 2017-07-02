@@ -12,7 +12,11 @@ while True:
         call(["scrapy", "crawl", "immoscout", "-o", "href.json", "-s", "LOG_ENABLED=false"])
     else:
         call(["scrapy", "crawl", "immoscout", "-o", "href.json", "-s", "LOG_ENABLED=false"])
-        call(["cp", fname, "href_old.json"])
+        ini=input("Initialization for the first time. Sending messages to all offers found?(y/n)")
+        if ini.lower() == "y":
+            call(["rm", "href_old.json", ";", "touch", "href_old.json"])
+        else if ini.lower() == "n":
+            call(["cp", fname, "href_old.json"])
     with open('href.json') as data_file:    
             data = json.load(data_file)
     data=list(set([i[u'href'] for i in data]))
