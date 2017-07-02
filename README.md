@@ -50,7 +50,7 @@ First, we need to [create a new scrapy project](!https://docs.scrapy.org/en/late
 
 `mkdir Play`
 
-cd Play
+`cd Play`
 
 and create the new project called immo:
 
@@ -60,21 +60,17 @@ then you will have the following structure of directories and files:
 
 `immo/`
 
-​	`scrapy.cfg            # deploy configuration file`
+    `scrapy.cfg            # deploy configuration file`
 
-​	`immo/             # project's Python module, you'll import your code from here`
+    `immo/             # project's Python module, you'll import your code from here`
 
-​		`__init__.py`
+        `__init__.py`
+        `items.py          # project items definition file`
+        `pipelines.py      # project pipelines file`
+        `settings.py       # project settings file`
 
-​		`items.py          # project items definition file`
-
-​		`pipelines.py      # project pipelines file`
-
-​		`settings.py       # project settings file`
-
-​		`spiders/          # a directory where you'll later put your spiders`
-
-​			`__init__.py`
+        `spiders/          # a directory where you'll later put your spiders`
+        `__init__.py`
 
 Now let's go to the directory called `immo` and contains the file `scrapy.cfg` and another direcory which is also called `immo`:
 
@@ -100,8 +96,8 @@ write your message to the landlord. Please keep the 'u' in front of the message 
 
    ````python
    start_urls = [
-       'https://www.immobilienscout24.de/Suche/S-2/Wohnung-Miete/Umkreissuche/Stuttgart/70569/-64516/2093406/-/-/5/1,50-/-/EURO--850,00',
-   	'https://www.immobilienscout24.de/Suche/S-2/Wohnung-Miete/Fahrzeitsuche/Stuttgart/70569/-64516/2093406/-/-/30/2,00-/-/EURO--850,00'
+	'https://www.immobilienscout24.de/Suche/S-2/Wohnung-Miete/Umkreissuche/Stuttgart/70569/-64516/2093406/-/-/5/1,50-/-/EURO--850,00',
+	'https://www.immobilienscout24.de/Suche/S-2/Wohnung-Miete/Fahrzeitsuche/Stuttgart/70569/-64516/2093406/-/-/30/2,00-/-/EURO--850,00'
    	]
    ````
 
@@ -123,16 +119,6 @@ Further simpilfications of the scripts will be done to make it a blackbox tool.
 
 
 
-
-
-
-`cp /directory/to/immo.py /directory/to/submit.py .`
-
-`cp /directory/to/immo_spider.py` ./immo/spiders/`
-
-`cp /directory/to/immo.py /directory/to/submit.py .`
-
-`cp /directory/to/immo_spider.py` ./immo/spiders/`
 
 
 
