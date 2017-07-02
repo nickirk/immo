@@ -27,10 +27,14 @@ while True:
             data_old = json.load(data_old_file)
     data_old=list(set([i[u'href'] for i in data_old]))
     #black list
-    with open('blacklist.json') as blacklist:
-        blacklist = json.load(blacklist)
+    if os.path.isfile('blacklist.json'):
+        with open('blacklist.json') as blacklist:
+            blacklist = json.load(blacklist)
+        blacklist = list(set([i for i in blacklist]))
+    else:
+        blacklist = []
     print "Blacklist: ", blacklist
-    blacklist = list(set([i for i in blacklist]))
+
     #with open('href_old.json', 'w') as data_old_file:    
     #    json.dump(data_old,data_old_file)
     #print data_old
