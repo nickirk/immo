@@ -44,39 +44,17 @@ There are just 3 python scripts.
 
 `submit.py`
 
+Get the scripts by 
+
+`git clone https://github.com/nickirk/immo.git`
+
+
 ### How it works
-
-First, we need to [create a new scrapy project](!https://docs.scrapy.org/en/latest/intro/tutorial.html#creating-a-project). You can make a directory under your home directory called *Play*:
-
-`mkdir Play`
-
-`cd Play`
-
-and create the new project called immo:
-
-`scrapy startproject immo`
-
-then you will have the following structure of directories and files:
-
-     immo/
-
-         scrapy.cfg            # deploy configuration file
-
-         immo/             # project's Python module, you'll import your code from here
-
-             __init__.py
-             items.py          # project items definition file
-             pipelines.py      # project pipelines file
-             settings.py       # project settings file
-
-             spiders/          # a directory where you'll later put your spiders
-             __init__.py
-
-Now let's go to the directory called `immo` and contains the file `scrapy.cfg` and another direcory which is also called `immo`:
+Go into the directory: 
 
 `cd immo`
 
-and download the aforementioned 3 files and modify them according to the below instructions:
+####Modify the scripts according to your needs:
 
 1. In `submit.py` file, you will see
 
@@ -100,37 +78,55 @@ write your message to the landlord. Please keep the 'u' in front of the message 
 	'https://www.immobilienscout24.de/Suche/S-2/Wohnung-Miete/Fahrzeitsuche/Stuttgart/70569/-64516/2093406/-/-/30/2,00-/-/EURO--850,00'
    	]
    ````
+You can go to  [immobilienscout](!https://www.immobilienscout24.de/) and enter your filter, e.g. around 70569 Stuttgart within 5 km or 30 mins away, price until 850 Euros. Click search, you will arrive at the page showing you the results. However, you need to choose the realtime (Aktualität) sorting so that the results you see are always the latest offers. Then copy the link address and paste it into the start_urls. You can put more than one links to it separated by comma.
 
-   You can go to  [immobilienscout](!https://www.immobilienscout24.de/) and enter your filter, e.g. around 70569 Stuttgart within 5 km or 30 mins away, price until 850 Euros. Click search, you will arrive at the page showing you the results. However, you need to choose the realtime (Aktualität) sorting so that the results you see are always the latest offers. Then copy the link address and paste it into the start_urls. You can put more than one links to it separated by comma.
+####Create an Scrapy Spider project
+First, we need to [create a new scrapy project](!https://docs.scrapy.org/en/latest/intro/tutorial.html#creating-a-project) 
+called immobot:
+
+`scrapy startproject immobot`
+
+then you will have the following structure of directories and files:
+
+     immobot/                  #Working directory
+         scrapy.cfg            # deploy configuration file
+         immobot/             # project's Python module, you'll import your code from here
+             __init__.py
+             items.py          # project items definition file
+             pipelines.py      # project pipelines file
+             settings.py       # project settings file
+             spiders/          # a directory where you'll later put your spiders
+                 __init__.py
+
+Now let's go to the working directory called `immobot` which contains the file `scrapy.cfg` and another direcory which is also called `immobot`:
+
+`cd immobot`
 
 Now copy the 3 files into the following directories:
 
-`cp /directory/to/immo.py /directory/to/submit.py .`
+`cp ../immo.py ../submit.py .`
 
-`cp /directory/to/immo_spider.py ./immo/spiders/`
+`cp ../immo_spider.py ./immobot/spiders/`
+
+after this you will have the following structure of directories and files 
+     immobot/                  #Working directory
+         immo.py
+         submit.py
+         scrapy.cfg            # deploy configuration file
+         immobot/             # project's Python module, you'll import your code from here
+             __init__.py
+             items.py          # project items definition file
+             pipelines.py      # project pipelines file
+             settings.py       # project settings file
+             spiders/          # a directory where you'll later put your spiders
+                 __init__.py
+                 immo_spider.py
+
 
 In the end, just run 
 
 `python immo.py`
 
-the Bot will be running and doing everything for you.
+under you working directory *immobot*, the Bot will be running and doing everything for you.
 
 Further simpilfications of the scripts will be done to make it a blackbox tool.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
