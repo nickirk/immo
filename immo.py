@@ -10,22 +10,29 @@ while True:
     if os.path.isfile(fname):
         call(["mv", fname, "href_old.json"])
         call(["scrapy", "crawl", "immoscout", "-o", "href.json", "-s", "LOG_ENABLED=false"])
+        with open('href.json') as data_file:    
+                data = json.load(data_file)
+        data=list(set([i[u'href'] for i in data]))
+        with open('href_old.json') as data_old_file:    
+                data_old = json.load(data_old_file)
+        data_old=list(set([i[u'href'] for i in data_old]))
     else:
         call(["scrapy", "crawl", "immoscout", "-o", "href.json", "-s", "LOG_ENABLED=false"])
-        ini=input("Initialization for the first time. Sending messages to all offers found?(y/n)")
+        with open('href.json') as data_file:    
+                data = json.load(data_file)
+        data=list(set([i[u'href'] for i in data]))
+        print data
+        ini=raw_input("No href.json file found. Sending messages to all offers found above?(y/n)\n")
         if ini.lower() == "y":
-            call(["rm", "href_old.json", ";", "touch", "href_old.json"])
+            data_old = []
         elif ini.lower() == "n":
             call(["cp", fname, "href_old.json"])
-    with open('href.json') as data_file:    
-            data = json.load(data_file)
-    data=list(set([i[u'href'] for i in data]))
+            with open('href_old.json') as data_old_file:    
+                    data_old = json.load(data_old_file)
+            data_old=list(set([i[u'href'] for i in data_old]))
     #with open('href.json', 'w') as data_file:    
     #    json.dump(data,data_file)
     #print data
-    with open('href_old.json') as data_old_file:    
-            data_old = json.load(data_old_file)
-    data_old=list(set([i[u'href'] for i in data_old]))
     #black list
     if os.path.isfile('blacklist.json'):
         with open('blacklist.json') as blacklist:
