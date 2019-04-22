@@ -11,6 +11,7 @@ the script. On immobilienscout, there are many offers, yes. But unless you are o
 are married, your chance of getting a offer is diminishingly low. From my experience, wg-gesucht is more friendly to students and they responded to my report of a fraud on their website very quickly.
 
 The way to use it is almost the same as the old script. Just the names of the scripts are different. Things to pay attention to are:
+
 0. the corresponding files are 
 	- immo.py --> wg-gesucht.py
 	- submit.py --> submit_wg.py
