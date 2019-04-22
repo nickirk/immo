@@ -21,6 +21,7 @@ The way to use it is almost the same as the old script. Just the names of the sc
 due to reasons already stated in above.
 3. speaking German increases your chance of getting a offer. Try to force yourself speaking German. :)
 4. please don't abuse the script by sending requests too frequently to the website, otherwise they could take some anti-measures to rule out the bot, which is bad for everyone who wants to look for a flat using the bot.
+5. The script can be run on raspberry pi 3b. Some more questions please see (closed) issues before you open a new issue. Thanks. 
 
 Good luck to your wohnung hunt.
 
