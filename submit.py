@@ -4,7 +4,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.common.exceptions import NoSuchElementException
 import time
 def submit_app(ref):
-    driver=webdriver.Chrome('chromedriver')
+    driver=webdriver.Chrome('/usr/lib/chromium-browser/chromedriver')
     driver.get('https://www.immobilienscout24.de'+ref+'#/basicContact/email')
     driver.implicitly_wait(10)
     el = driver.find_element_by_id('contactForm-salutation')
