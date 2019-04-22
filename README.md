@@ -2,9 +2,27 @@
 
 ## Introduction
 
-Looking for a flat in Stuttgart can be a pain in the eye (ass) due to many different reasons, e.g. you are a student and many landlords don't like students; or you don't speak German so well and landlords, most of who are in their old ages, cannot speak English so well; or there are just simply too many people looking for a nice flat, whenever a new offer apears online the landlord will receive tons of applications and they have nothing to do but to choose the first ones who sent them the applications. So making sure that your application always apear among the first emails in the landlords' inbox is crucial to get you a chance to visit the apartment. I learned the lesson in a hard way by spending a lot of my time online monitoring the updates of apartment offers on [immobilienscout](!https://www.immobilienscout24.de/), [wg-gesucht](!https://www.wg-gesucht.de/wohnungen-in-Stuttgart.124.2.0.0.html) or [ebay](!https://www.ebay-kleinanzeigen.de/stadt/stuttgart/) everyday, but in the end almost all of my inquiries went straight into the vacuum and never got an echo back. After somedays, I realised that maybe it is true that there are too many people online looking for a flat, and my messages are just among the tons of messages the landlords receive, so to increase my chance, I need to send messages as soon as the offer is put online. So I wrote a Bot in Python to monitor the website immobilienscout every minute, once it finds new offers it will send my message, including some information about ourselves, to the landlord automatically. Basically the whole process won't take more than 2 minutes since the offer is put online. 
+Looking for a flat in big cities can be a pain in the eye (ass) due to many different reasons, e.g. you are a student and many landlords don't like students; or you don't speak German so well and landlords, most of who are in their old ages, cannot speak English so well; or there are just simply too many people looking for a nice flat, whenever a new offer apears online the landlord will receive tons of applications and they have nothing to do but to choose the first ones who sent them the applications. So making sure that your application always apear among the first emails in the landlords' inbox is crucial to get you a chance to visit the apartment. I learned the lesson in a hard way by spending a lot of my time online monitoring the updates of apartment offers on [immobilienscout](!https://www.immobilienscout24.de/), [wg-gesucht](!https://www.wg-gesucht.de/wohnungen-in-Stuttgart.124.2.0.0.html) or [ebay](!https://www.ebay-kleinanzeigen.de/stadt/stuttgart/) everyday, but in the end almost all of my inquiries went straight into the vacuum and never got an echo back. After somedays, I realised that maybe it is true that there are too many people online looking for a flat, and my messages are just among the tons of messages the landlords receive, so to increase my chance, I need to send messages as soon as the offer is put online. So I wrote a Bot in Python to monitor the website immobilienscout every minute, once it finds new offers it will send my message, including some information about ourselves, to the landlord automatically. Basically the whole process won't take more than 2 minutes since the offer is put online. 
 
-I think immobilienscout has the most number of new offers everyday, that's why I chose to monitor it. In principle we can make the Bot to monitor other websites, too.
+~~I think immobilienscout has the most number of new offers everyday, that's why I chose to monitor it. In principle we can make the Bot to monitor other websites, too.~~
+
+Update 22.04.2019: *Now it is also working on wg-gesucht.de, too.* Actually, that's where I found my current apartment using 
+the script. On immobilienscout, there are many offers, yes. But unless you are one of the guys with a high income job or you 
+are married, your chance of getting a offer is diminishingly low. From my experience, wg-gesucht is more friendly to students and they responded to my report of a fraud on their website very quickly.
+
+The way to use it is almost the same as the old script. Just the names of the scripts are different. Things to pay attention to are:
+0. the corresponding files are 
+	- immo.py --> wg-gesucht.py
+	- submit.py --> submit_wg.py
+	- immo_spider.py --> wg-gesucht-spider.py
+1. wg-gesucht.de asks for your username and password, which you need to write in the places in the submit_wg.py script.
+2. immobilienscout now implements a premium feature which will break down the code but I did not take care to handle, 
+due to reasons already stated in above.
+3. speaking German increases your chance of getting a offer. Try to force yourself speaking German. :)
+4. please don't abuse the script by sending requests too frequently to the website, otherwise they could take some anti-measures to rule out the bot, which is bad for everyone who wants to look for a flat using the bot.
+
+Good luck to your wohnung hunt.
+
 
 ### Requirement
 
