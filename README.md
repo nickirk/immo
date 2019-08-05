@@ -48,7 +48,7 @@ I have only tested the Bot on Linux (Debian, Ubuntu) and Mac. I am not sure abou
 
    `brew install chromedriver`
 
-2. Python 2.7 or higher. Normally it comes with Linux or MacOS.
+2. Tested only with Python 2.7, there might be some syntax errors with Python3. Normally it comes with Linux or MacOS.
 
 3. [Scrapy](!https://scrapy.org/), which is a package based on Python for writing web spiders. After/if you have python installed, then the following command should install *Scrapy* for you
 
