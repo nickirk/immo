@@ -48,7 +48,7 @@ I have only tested the Bot on Linux (Debian, Ubuntu) and Mac. I am not sure abou
 
    `brew install chromedriver`
 
-2. Tested only with Python 2.7, there might be some syntax errors with Python3. Normally it comes with Linux or MacOS.
+2. Tested only with Python 2.7, there might be some syntax errors with Python 3 in the print function. The solution is just to write all print functions with parentheses.
 
 3. [Scrapy](!https://scrapy.org/), which is a package based on Python for writing web spiders. After/if you have python installed, then the following command should install *Scrapy* for you
 
