@@ -152,3 +152,12 @@ In the end, just run
 under you working directory *immobot*, the Bot will be running and doing everything for you.
 
 Further simpilfications of the scripts will be done to make it a blackbox tool.
+
+## Tips and troubleshooting
+You may run into issues, hopefully these tips can help:
+
+**chromedriver may be installed somewhere else** then asumed by the script. You can check this by running `which chromedriver`, it's result should be: `/usr/local/bin/chromedriver`. If it's not, then change this value in [submit.py]() in the line with `webdriver.Chrome('<pass in your value here>')`.
+
+**you've made changes, but nothing changed**. Remember to copy the `.py` files into the `immobot` folder.
+
+**testing** can be easily done by removing one of the id's from the `diff.dat` file. During the next check, the script will just consider this specific advertisement as a new one.
