@@ -22,7 +22,7 @@ while True:
                 data = json.load(data_file)
         data=list(set([i[u'href'] for i in data]))
         print(data)
-        ini=raw_input("No href.json file found. Sending messages to all offers found above?(y/n)\n")
+        ini=input("No href.json file found. Sending messages to all offers found above?(y/n)\n")
         if ini.lower() == "y":
             data_old = []
         elif ini.lower() == "n":
