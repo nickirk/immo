@@ -1,5 +1,9 @@
 # Automatic Wohnung Search Bot 
 
+**Support and bug fixes for immoscout24 are needed. Currently the script only works properly for wg-gesucht.de**
+
+Now you need to put your message to the landlord in a file named "message.txt" instead of in the script. 
+
 ## Introduction
 
 Looking for a flat in big cities can be a pain in the eye (ass) due to many different reasons, e.g. you are a student and many landlords don't like students; or you don't speak German so well and landlords, most of who are in their old ages, cannot speak English so well; or there are just simply too many people looking for a nice flat, whenever a new offer apears online the landlord will receive tons of applications and they have nothing to do but to choose the first ones who sent them the applications. So making sure that your application always apear among the first emails in the landlords' inbox is crucial to get you a chance to visit the apartment. I learned the lesson in a hard way by spending a lot of my time online monitoring the updates of apartment offers on [immobilienscout](!https://www.immobilienscout24.de/), [wg-gesucht](!https://www.wg-gesucht.de/wohnungen-in-Stuttgart.124.2.0.0.html) or [ebay](!https://www.ebay-kleinanzeigen.de/stadt/stuttgart/) everyday, but in the end almost all of my inquiries went straight into the vacuum and never got an echo back. After somedays, I realised that maybe it is true that there are too many people online looking for a flat, and my messages are just among the tons of messages the landlords receive, so to increase my chance, I need to send messages as soon as the offer is put online. So I wrote a Bot in Python to monitor the website immobilienscout every minute, once it finds new offers it will send my message, including some information about ourselves, to the landlord automatically. Basically the whole process won't take more than 2 minutes since the offer is put online. 
