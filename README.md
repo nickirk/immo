@@ -25,6 +25,25 @@ For wg-gesucht, here are things to pay attention to:
 Good luck to your wohnung hunt.
 
 
+### 👋 Looking for something simpler?
+
+**immobot** is open source and powerful, but it requires Python, configuration, and being comfortable with the command line. If that's not you, I've also built a sister project:
+
+**[AptSweep](https://chromewebstore.google.com/detail/aptsweep/dmcaogbnahconeadeihhogffaihnphlb)** ([aptsweep.com](https://aptsweep.com)) is a browser extension that does the same job in a more user-friendly way. Install it, set your filters in a popup, and new listings on Rightmove, Zoopla, ImmoScout24, WG-Gesucht, and Daft surface in your browser within ~60 seconds of being posted. One click opens the contact form with your details pre-filled — you review and hit Send yourself.
+
+| | immobot | AptSweep |
+|---|---|---|
+| Setup | Clone repo, configure Python env | [Install from Chrome Web Store](https://chromewebstore.google.com/detail/aptsweep/dmcaogbnahconeadeihhogffaihnphlb) |
+| Runs on | Your machine, headless | Your browser, while you browse |
+| Automation level | Fully automated (sends applications) | Semi-automated (you click Send) |
+| Audience | Developers comfortable with CLI | Anyone with a browser |
+| Source | Open source (this repo) | Closed source, free to use |
+| Privacy | Runs entirely on your machine | Runs entirely in your browser — no AptSweep server, no data leaves your device |
+| More info | — | [aptsweep.com](https://aptsweep.com) |
+
+Both are free. If you'd rather read and hack on the code yourself, you're already in the right place — read on.
+
+
 ### Requirement
 
 I have only tested the Bot on Linux (Debian, Ubuntu) and Mac. I am not sure about whether you can do some tricks and make it work on Windows, too. But worth trying.
